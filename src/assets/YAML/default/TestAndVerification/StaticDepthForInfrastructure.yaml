@@ -3,7 +3,7 @@ Test and Verification:
   Static depth for infrastructure:
     Analyze logs:
       risk: Not aware of attacks happening.
-      measure: Check logs for keywords.
+      measure: Statically check logs for keywords.
       difficultyOfImplementation:
         knowledge: 2
         time: 2
@@ -44,7 +44,7 @@ Test and Verification:
     Check for known vulnerabilities:
       risk: Known vulnerabilities in infrastructure components like container images
         might get exploited.
-      measure: Check for known vulnerabilities
+      measure: Statically check for known vulnerabilities in infrastructure.
       difficultyOfImplementation:
         knowledge: 2
         time: 1
@@ -65,7 +65,7 @@ Test and Verification:
       evidence: ""
       comments: ""
     Check for malware:
-      risk: Third party might include  malware. Ether due to the maintainer (e.g.
+      risk: Third party components might include malware. Either due to the maintainer (e.g.
         typo squatting of an image name and using the wrong image) or by an attacker
         on behalf of the maintainer with stolen credentials.
       measure: Check for malware in components (e.g. container images, VM baseline
@@ -139,7 +139,7 @@ Test and Verification:
       comments: ""
     Stored Secrets:
       risk: Confidential information exposure via git history, in container images or in code.
-      measure: Test for secrets presence in code, container images and commit history.
+      measure: Statically test for secrets presence in code, container images and commit history.
       difficultyOfImplementation:
         knowledge: 2
         time: 1
@@ -165,7 +165,7 @@ Test and Verification:
     Test cluster deployment resources:
       risk: The deployment configuration (e.g. kubernetes deployment resources) might
         contain unsecured configurations.
-      measure: Test the deployment configuration for virtualized environments for
+      measure: Statically test the deployment configuration for virtualized environments for
         unsecured configurations.
       difficultyOfImplementation:
         knowledge: 2
@@ -190,7 +190,7 @@ Test and Verification:
       comments: ""
     Test of infrastructure components for known vulnerabilities:
       risk: Infrastructure components might have vulnerabilities.
-      measure: Test for known vulnerabilities in infrastructure components. Often,
+      measure: Statically test for known vulnerabilities in infrastructure components. Often,
         the only way to respond to known vulnerabilities in operating system packages
         is to accept the risk and wait for a patch. As the patch needs to be applied
         fast when it is available, this activity depends on 'Usage of a maximum life
@@ -222,7 +222,7 @@ Test and Verification:
     Test of virtualized environments:
       risk: Virtualized environments (e.g. via Container Images) might contains
         unsecure configurations.
-      measure: Test virtualized environments for unsecured configurations.
+      measure: Statically test virtualized environments for unsecured configurations.
       difficultyOfImplementation:
         knowledge: 2
         time: 1
@@ -244,8 +244,8 @@ Test and Verification:
     Test the cloud configuration:
       risk: Standard hardening practices for cloud environments are not performed
         leading to vulnerabilities.
-      measure: With the help of tools, the configuration of virtual environments are
-        tested.
+      measure: Statically test the configuration of virtual environments using tools
+        like kube-bench.
       difficultyOfImplementation:
         knowledge: 2
         time: 2
@@ -268,7 +268,7 @@ Test and Verification:
     Test the definition of virtualized environments:
       risk: The definition of virtualized environments (e.g. via <i>Dockerfile</i>)
         might contain unsecure configurations.
-      measure: Test the definition of virtualized environments for unsecured configurations.
+      measure: Statically test the definition of virtualized environments (e.g. Dockerfile) for unsecured configurations.
       difficultyOfImplementation:
         knowledge: 2
         time: 1

@@ -75,7 +75,7 @@ Test and Verification:
     Test network segmentation:
       risk: Wrong or no network segmentation of pods makes it easier for an attacker
         to access a database and extract or modify data.
-      measure: Cluster internal test needs to be performed. Integration of fine granulated
+      measure: Cluster internal test needs to be performed. Integration of fine grained
         network segmentation (also between pods in the same namespace).
       difficultyOfImplementation:
         knowledge: 2

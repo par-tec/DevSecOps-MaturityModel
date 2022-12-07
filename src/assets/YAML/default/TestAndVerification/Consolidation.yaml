@@ -126,8 +126,9 @@ Test and Verification:
       comments: ""
     Simple visualization of defects:
       risk: The security level of a component is not visible. Therefore, the motivation
-        to enhance the security is not give.
-      measure: Vulnerabilities are simple visualized.
+        to enhance the security is not given.
+      measure: >-
+        Use visualization tools to highlight security issues and defects.
       difficultyOfImplementation:
         knowledge: 2
         time: 2
